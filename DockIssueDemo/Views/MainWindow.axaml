@@ -1,0 +1,27 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:DockIssueDemo.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:id="clr-namespace:Dock.Avalonia;assembly=Dock.Avalonia"
+             xmlns:dm="using:Dock.Model.Core"
+             xmlns:dmc="using:Dock.Model.Controls"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="DockIssueDemo.Views.MainWindow"
+        xmlns:collections="clr-namespace:System.Collections;assembly=System.Runtime"
+        Icon="/Assets/avalonia-logo.ico"
+        xmlns:views="using:DockIssueDemo.Views"
+        Title="DockIssueDemo" x:DataType="vm:MainWindowViewModel"
+         x:CompileBindings="True">
+
+  <Design.DataContext>
+    <vm:MainWindowViewModel/>
+  </Design.DataContext>
+
+  <Grid>
+    <DockControl x:Name="dockControl" Layout="{Binding Layout}" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,5"/>
+    
+  </Grid>
+
+
+</Window>
